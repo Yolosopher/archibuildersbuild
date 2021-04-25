@@ -1,0 +1,269 @@
+.slide-container {
+    position: relative;
+  }
+  .slide-container .swiperBg {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 0.4s;
+  }
+  @media (min-width: 1024px) {
+    .slide-container .swiperBg {
+      display: block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 265px;
+      height: 321px;
+      position: absolute;
+      top: 0;
+      right: 424px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .slide-container .swiperBg {
+      right: 695px;
+    }
+  }
+  .slide-container.fadein .swiperThumb div,
+  .slide-container.fadein .swiperImage div {
+    width: 0 !important;
+  }
+  @media (min-width: 1024px) {
+    .slide-container.fadein .swiperBg {
+      opacity: 1;
+    }
+    .slide-container.fadein .swiper-container .slideNav {
+      opacity: 1;
+    }
+  }
+  .slide-container.fadein .secondHolder div {
+    transform: translateY(0px) !important;
+    opacity: 1 !important;
+  }
+  .slide-container.fadein .secondHolder a {
+    transform: translateX(0px) !important;
+  }
+  .slide-container .swiper-container .slideNav {
+    opacity: 0;
+    position: absolute;
+    z-index: 99;
+    transition: opacity 1s;
+    transition-delay: 0.4s;
+  }
+  @media (min-width: 1024px) {
+    .slide-container .swiper-container .slideNav {
+      right: 526px;
+      bottom: 25px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .slide-container .swiper-container .slideNav {
+      right: 763px;
+    }
+  }
+  .slide-container .swiper-container .slideNav svg {
+    font-size: 20px !important;
+    color: #141313;
+    cursor: pointer !important;
+  }
+  @media (min-width: 1024px) {
+    .slide-container .swiper-container .slideNav svg.swiper-buton-next {
+      margin-left: 15px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .slide-container .swiper-container .slideNav svg.swiper-buton-next {
+      margin-left: 35px;
+    }
+  }
+  .slide-container .swiper-container .slideNav svg.swiper-button-disabled path {
+    stroke: #A1A0A0 !important;
+  }
+  @media (min-width: 1024px) {
+    .slide-container .swiper-slide {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: 25px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .slide-container .swiper-slide {
+      padding-top: 70px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .slide-container .swiper-slide .swiperHolder {
+      width: 50% !important;
+    }
+  }
+  .slide-container .swiper-slide .swiperHolder.first {
+    position: relative;
+    height: 240px;
+  }
+  @media (min-width: 1024px) {
+    .slide-container .swiper-slide .swiperHolder.first {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      order: 2;
+      position: relative;
+      margin-right: 0;
+      height: 480px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .slide-container .swiper-slide .swiperHolder.first {
+      height: 580px;
+    }
+  }
+  .slide-container .swiper-slide .swiperHolder.first img {
+    width: 110%;
+    top: -10%;
+    position: relative;
+    transform: translateX(-5%);
+  }
+  .slide-container .swiper-slide .swiperHolder.first .swiperImageHolderBig,
+  .slide-container .swiper-slide .swiperHolder.first .swiperImageHolderSmall {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .slide-container .swiper-slide .swiperHolder.first .swiperImageHolderBig {
+    height: 200px;
+  }
+  @media (min-width: 1024px) {
+    .slide-container .swiper-slide .swiperHolder.first .swiperImageHolderBig {
+      max-width: 606px;
+      height: 400px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .slide-container .swiper-slide .swiperHolder.first .swiperImageHolderBig {
+      max-width: 864px;
+      height: 500px;
+    }
+  }
+  .slide-container .swiper-slide .swiperHolder.first .swiperImageHolderSmall {
+    height: 140px;
+    width: 244px;
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+  }
+  @media (min-width: 1024px) {
+    .slide-container .swiper-slide .swiperHolder.first .swiperImageHolderSmall {
+      width: 485px;
+      height: 300px;
+      bottom: -80px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .slide-container .swiper-slide .swiperHolder.first .swiperImageHolderSmall {
+      width: 700px;
+      height: 400px;
+    }
+  }
+  .slide-container .swiper-slide .swiperHolder.first .swiperImage {
+    width: 100%;
+    height: 100%;
+  }
+  .slide-container .swiper-slide .swiperHolder.first .swiperImage div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #E7E7E7;
+    transition: width 1s;
+    transition-delay: 0.4s;
+  }
+  .slide-container .swiper-slide .swiperHolder.first .swiperThumb {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .slide-container .swiper-slide .swiperHolder.first .swiperThumb div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: #E7E7E7;
+    transition: width 1s;
+    transition-delay: 0.4s;
+  }
+  .slide-container .swiper-slide .swiperHolder.second {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .slide-container .swiper-slide .swiperHolder.second {
+      order: 1;
+      display: flex;
+      justify-content: center;
+    }
+    .slide-container .swiper-slide .swiperHolder.second .secondHolder {
+      width: 394px;
+    }
+    .slide-container .swiper-slide .swiperHolder.second .secondHolder div h2 {
+      font-size: 34px;
+    }
+    .slide-container .swiper-slide .swiperHolder.second .secondHolder div p {
+      height: 136px;
+      line-height: 28px;
+      font-size: 18px;
+      margin: 40px 0;
+    }
+  }
+  @media (min-width: 1920px) {
+    .slide-container .swiper-slide .swiperHolder.second {
+      padding-top: 80px;
+    }
+    .slide-container .swiper-slide .swiperHolder.second .secondHolder {
+      width: 566px;
+    }
+    .slide-container .swiper-slide .swiperHolder.second .secondHolder h2 {
+      font-size: 44px !important;
+    }
+    .slide-container .swiper-slide .swiperHolder.second .secondHolder p {
+      margin: 60px 0 !important;
+    }
+  }
+  .slide-container .swiper-slide .swiperHolder.second .secondHolder {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .slide-container .swiper-slide .swiperHolder.second .secondHolder div {
+    transform: translateY(40px);
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+    transition-delay: 0.4s;
+  }
+  .slide-container .swiper-slide .swiperHolder.second .secondHolder h2 {
+    font-size: 18px;
+    font-weight: 100;
+  }
+  .slide-container .swiper-slide .swiperHolder.second .secondHolder p {
+    height: 100px;
+    overflow: hidden;
+    line-height: 20px;
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  .slide-container .swiper-slide .swiperHolder.second .secondHolder a {
+    padding: 16px 32px;
+    background-color: var(--yellow);
+    font-size: 14px;
+    color: var(--blackbg);
+    font-weight: bold;
+    align-self: flex-start;
+    transform: translateX(-150px);
+    transition: transform 1s;
+    transition-delay: 0.4s;
+  }

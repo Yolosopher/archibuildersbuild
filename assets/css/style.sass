@@ -1,0 +1,235 @@
+@import _defaults
+@import _variables
+
+@import _nav
+@import _footer
+
+a
+    color: inherit
+
+h1, h2, h3, h4, h5, h6
+    font-family: 'Times New Roman', Times, serif
+    font-weight: normal
+// respo nav
+.navigation 
+    padding: 5px 14px
+    top: 0
+    @include plus1025()
+        position: relative
+        padding: 0 81px
+  
+.mobile-holder 
+    min-height: 0
+    max-height: 0
+    padding: 0
+    overflow: hidden
+    transition: 
+    @include plus1025()
+        display: none !important
+    transition: all .3s ease-out
+    &.open
+        min-height: calc(100vh - 93px)
+        max-height: calc(100vh - 93px)
+// @import _header
+.header
+    width: 100%
+    margin-top: 35px
+    height: 489px
+
+    @include plus1025()
+        margin-top: 0
+        height: unset
+        min-height: calc(100vh - 170px)
+    .container
+        width: 100%
+
+    &__swiper
+        width: 100%
+        padding-top: 25px
+        height: 100%
+        overflow: hidden
+        position: relative
+        @include plus1025()
+            height: 505px
+        @include sizePlus(1900px)
+            padding-top: 70px
+            height: 650px
+        &.fadein
+            .header__swiper__bg
+                opacity: 1
+                z-index: unset
+            .slideNav
+                opacity: 1
+            .imgbox
+                .imgcover
+                    width: 0 !important
+            .yellowbtn
+                opacity: 1
+                transform: translateX(0) !important
+            .header__swiper__wrapper__slide__content__textbox, h2
+                opacity: 1
+                transform: translateY(0)
+        &__bg
+            position: absolute
+            width: 265px !important
+
+            height: 321px !important
+            top: 0
+            left: 50%
+            opacity: 0
+            z-index: 1
+            transform: translateX(-35%)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+            transition: 1.2s ease-out
+        &__wrapper
+            display: flex
+            width: 100% !important
+            transform: translateX(0) !important
+            height: max-content
+            &__slide
+                // position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                flex-shrink: 0
+                // max-width: 1263px
+                margin: 0 auto
+                // opacity: 0
+                // transition: all linear 0s .3s !important
+                transition-delay: 0
+                &.newtransdelay
+                    transition-delay: .8s
+                @include plus1025()
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                &.swiper-slide-active
+                    // transition-delay: .s
+                &__content
+                    width: 100%
+                    padding-top: 40px
+                    font-size: 14px
+                    line-height: 20px
+                    @include plus1025()
+                        max-width: 394px
+                        margin: 0 auto
+                        font-size: 18px
+                        line-height: 28px
+
+                    @include sizePlus(1900px)
+                        max-width: 566px
+                    &__textbox
+                        margin: 20px 0
+                        font-size: 14px
+                        line-height: 20px
+                        @include plus1025()
+                            font-size: 18px
+                            line-height: 28px
+                            margin: 40px 0
+                            opacity: 0
+                            transform: translateY(40px)
+                            transition: 1.2s ease-out
+                        p
+                            @include maxcolumn(5)
+                            
+                &__images
+                    width: 100%
+                    position: relative
+                    @include plus1025()
+                        height: 480px
+                    @include sizePlus(1900px)
+                        height: 580px
+                    .simpleParallax, img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        top: 0
+                        z-index: 3
+                    &__smallimg
+                        position: absolute
+                        bottom: -80px
+                        right: 15px
+                        height: 400px
+                        width: 100%
+                        @include plus1025()
+                            width: 485px
+                            height: 300px
+                        @include sizePlus(1900px)    
+                            bottom: 0
+                            width: 700px
+                        img, .simpleParallax
+                            height: 220px
+                            @include sizePlus(1900px)    
+                                height: 320px
+                        .imgcover
+                            right: 0
+                    &__bigimg
+                        height: 355px
+                        width: 100%
+                        @include plus1025()
+                            height: 400px
+                        @include sizePlus(1900px)                        
+                            height: 500px
+                        .imgcover
+                            left: 0
+                    .imgbox
+                        position: relative
+                        display: flex
+                        width: 100%
+                        height: 100%
+                        .imgcover
+                            position: absolute
+                            display: flex
+                            width: 100%
+                            overflow: hidden
+                            height: 100%
+                            top: 0
+                            background-color: #E7E7E7
+                            z-index: 3      
+                            transition: width 1s ease-out !important                     
+
+
+
+
+                h2
+                    font-size: 18px
+                    @include plus1025()
+                        font-size: 34px
+                        line-height: 38px
+                        opacity: 0
+                        transform: translateY(40px)
+                        transition: 1.2s ease-out
+                        
+
+.yellowbtn
+    display: inline-block
+    padding: 16px 32px
+    background-color: $yellow
+    font-size: 14px
+    font-weight: bold
+    opacity: .5
+    transform: translateX(-200%) !important
+    transition: all 1.2s ease-out
+*
+    // transition: none !important
+.slideNav
+    display: grid
+    grid-gap: 15px
+    grid-template-columns: auto auto
+    z-index: 1
+    opacity: 0
+    @include plus1025()
+        position: absolute
+        left: 50%
+        bottom: 25px
+        transition: all 1.2s ease-out
+.swiper-button-disabled
+    opacity: .3
+
+.swiper-buton-next,
+.swiper-buton-prev
+    cursor: pointer
