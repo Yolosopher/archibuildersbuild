@@ -1109,6 +1109,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 140px;
 }
 
+@media screen and (min-width: 1025px) {
+  .header__swiper__wrapper__slide__images__smallimg img, .header__swiper__wrapper__slide__images__smallimg .simpleParallax {
+    height: 300px;
+  }
+}
+
 @media screen and (min-width: 1900px) {
   .header__swiper__wrapper__slide__images__smallimg img, .header__swiper__wrapper__slide__images__smallimg .simpleParallax {
     height: 320px;
