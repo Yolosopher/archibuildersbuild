@@ -2,9 +2,10 @@
 $blue: #20489D
 $green: #93C54B
 $yellow: #FFC01E
-$grey: #707070
+$grey: #E7E7E7
 $black: #000000
 $red: #ff3434
+$bglayer: #141313
 
 
 
@@ -15,6 +16,7 @@ $width769: 769px
 $width1025: 1025px
 $width1279: 1279px
 $width1441: 1441px
+$width1900: 1900px
 $max-width: 1066px // 1006px
 $containerPaddingIpad: 20px
 $containerPadding: 30px
@@ -52,6 +54,10 @@ $padL: calc( ((100vw - 10px) - 1697px) / 2)
 
 @mixin plus1441()
     @media screen and (min-width: $width1441)
+        @content
+
+@mixin plus1900()
+    @media screen and (min-width: $width1900)
         @content
 
 @mixin sizePlus($width)
