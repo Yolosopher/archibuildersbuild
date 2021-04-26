@@ -1,0 +1,236 @@
+.fadein
+    .homevideo__desc__cover
+        width: 0 !important
+    .homevideo__video__cover
+        width: 0 !important
+    .section2Content__ul__li__content__cover
+        width: 0 !important
+    .section2Content__ul__li__image__cover
+        width: 0 !important
+    
+.section
+    &__title
+        font-size: 18px
+        line-height: 1
+        margin-bottom: 8px
+        font-weight: normal
+        @include plus1025()
+            font-size: 34px
+            margin-bottom: 16px
+        @include plus1900()
+            font-size: 44px
+            margin-bottom: 18px
+    &__subtitle
+        font-size: 14px
+        line-height: 1
+        margin-bottom: 40px
+        font-weight: normal
+        @include plus1025()
+            font-size: 18px
+            margin-bottom: 50px
+        @include plus1900()
+            margin-bottom: 60px
+    
+@keyframes pulse
+    0%
+        transform: scale(1)
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7)
+    70%
+        transform: scale(1.2)
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0)
+    100%
+        transform: scale(1)
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0)
+
+.section1
+    padding-top: 50px
+    padding-bottom: 25px
+    @include plus1025()
+        padding-top: 140px
+        padding-bottom: 70px
+    @include plus1900()
+        padding-top: 180px
+        padding-bottom: 90px
+
+.homevideo
+    width: 100%
+    height: 364px
+    position: relative
+    @include plus1025()
+        height: 680px
+    @include plus1900()
+        height: 710px
+    .simpleParallax
+        height: 220px
+        @include plus1025()
+            width: 818px
+            height: 550px
+        @include plus1900()
+            height: 600px
+            width: 1162px
+    &__video
+        height: 220px
+        position: relative
+        @include plus1025()
+            width: 818px
+            height: 550px
+        @include plus1900()
+            height: 600px
+            width: 1162px
+        &__imgbox
+            position: absolute
+            width: 100%
+            height: 100%
+            padding-right: 5%
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &__link
+            position: absolute
+            top: 20px
+            left: 20px
+            display: flex
+            align-items: center
+            @include plus1025()
+                top: 50%
+                transform: translateY(-50%)
+                left: 106px
+            b
+                font-size: 14px
+                color: #fff
+        span
+            margin-right: 10px
+            width: 50px
+            height: 50px
+            border-radius: 100%
+            background-color: #fff
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            @media (min-width: 1024px)
+                margin-right: 30px
+                width: 80px
+                height: 80px
+
+            &::before
+                content: ""
+                border-radius: 100%
+                width: 63px
+                height: 63px
+                background-color: #ffffff70
+                position: absolute
+                @media (min-width: 1024px)
+                    width: 80px
+                    height: 80px
+                    transform: scale(1)
+                    animation: pulse 2s infinite
+
+            i
+                color: $yellow
+                font-size: 12px
+                position: relative
+                z-index: 5
+                @media (min-width: 1024px)
+                    font-size: 15px
+        &__cover
+            width: 100%
+            height: 100%
+            position: absolute
+            z-index: 10
+            left: 0
+            top: 0
+            background-color: $grey
+            transition: width 1.2s .2s ease-out 
+
+    &__desc
+        min-height: 210px
+        position: absolute
+        bottom: 0
+        padding: 30px
+        width: 80%
+        right: 10%
+        background-color: $yellow
+        @include plus1025()
+            right: 0
+            width: 717px
+            height: 415px
+            padding: 80px 106px
+        @include plus1900()
+            width: 50%
+            height: 510px
+            padding: 100px 150px
+        h2
+            line-height: auto
+            font-size: 18px
+            @include plus1025()
+                font-size: 34px
+            @include plus1900()
+                font-size: 44px
+        &__textbox
+            margin-top: 20px
+            @include font(14px, 20px)
+            @include maxcolumn(4)
+            @include plus1025()
+                @include maxcolumn(100)
+                @include font(18px, 28px)
+                margin-top: 40px
+            @include plus1900()
+                margin-top: 60px
+        &__cover
+            min-height: 210px
+            position: absolute
+            bottom: 0
+            width: 80%
+            right: 10%
+            z-index: 2
+            background-color: $grey
+            transition: width 1.2s .2s ease-out !important
+            @include plus1025()
+                right: 0
+                width: 717px
+                height: 415px
+            @include plus1900()
+                width: 50%
+                height: 510px
+.sec1videomodal
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 998
+    width: 0
+    height: 0
+    overflow: hidden
+    background-color: $bglayer
+    display: flex
+    justify-content: center
+    align-items: center
+    &.opened
+        width: 100%
+        height: 100vh
+    &__X
+        position: absolute
+        top: 40px
+        right: 15px
+        z-index: 1
+        color: #ffffff60
+        font-size: 20px
+        @include plus1025()
+            top: 30px
+            right: 60px
+            font-size: 30px
+    &__videocontainer
+        width: 100%
+        height: 346px
+        margin: 0 auto
+        overflow: hidden
+        @include plus1025()
+            width: 818px
+            height: 500px
+        @include plus1900()
+            width: 864px   
+            height: 600px  
+        iframe
+            width: 100%
+            height: 100%
