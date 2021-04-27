@@ -1797,7 +1797,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section2Content__ul__li__image__cover {
-  width: 110%;
+  width: 100%;
   height: 110%;
   position: absolute;
   z-index: 10;
