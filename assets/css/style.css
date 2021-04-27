@@ -1704,18 +1704,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section2Content {
-  padding-bottom: 50px;
+  padding: 50px 0;
 }
 
 @media screen and (min-width: 1025px) {
   .section2Content {
-    padding-bottom: 140px;
+    padding: 140px 0;
   }
 }
 
 @media screen and (min-width: 1900px) {
   .section2Content {
-    padding-bottom: 180px;
+    padding: 180px 0;
   }
 }
 
