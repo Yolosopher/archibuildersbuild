@@ -1812,6 +1812,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: width 1.2s .2s ease-out;
 }
 
+.section2Content__ul__li__image .simpleParallax {
+  height: 100%;
+}
+
 .section2Content__ul__li__content {
   position: relative;
   padding: 0 20px;
