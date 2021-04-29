@@ -7,23 +7,7 @@ const returnYtEmbedUrl = (url) => {
     return `https://www.youtube.com/embed/${utubecode}`
 }
 
-const sections = document.querySelectorAll(".observing")
 
-const callbackFunction = (entries) => {
-    if (entries[0].isIntersecting) {
-        entries[0].target.classList.add("fadein")
-    } else {
-        entries[0].target.classList.remove("fadein")
-    }
-}
-
-const observer = new IntersectionObserver(callbackFunction, {
-    threshold: 0.3,
-})
-
-sections.forEach((section) => {
-    observer.observe(section)
-})
 let swp = new Swiper(".header__swiper", {
     slidesPerView: 1,
     speed: 1800,
@@ -55,11 +39,6 @@ let swp = new Swiper(".header__swiper", {
 
 
 
-const paralaxbgs = document.getElementsByClassName("paralaxeff")
-new simpleParallax(paralaxbgs, {
-    scale: 1.25,
-    delay: 2,
-})
 
 const homevideo__video__img = document.querySelector(
     ".homevideo__video__imgbox img"

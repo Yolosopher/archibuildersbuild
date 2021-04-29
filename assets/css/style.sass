@@ -32,8 +32,8 @@ h1, h2, h3, h4, h5, h6
         display: none !important
     transition: all .3s ease-out
     &.open
-        min-height: calc(100vh - 93px)
-        max-height: calc(100vh - 93px)
+        min-height: calc(100vh - 110px)
+        max-height: calc(100vh - 110px)
 
 @import _myheader
 
@@ -41,151 +41,49 @@ h1, h2, h3, h4, h5, h6
 
 @import _services
 
-.homegallery
-    position: relative
-    padding-bottom: 50px
+@import _homegallery
+
+
+.header__swiper__wrapper.aboutus-wrappa
+    padding-bottom: 80px
     @include plus1025()
-        padding-bottom: 120px
-    &__gallery
-        display: grid
-        width: 100%
-        grid-gap: 10px
+        padding-bottom: 60px
+    @include plus1900()
+        padding-top: 70px
+
+.header__swiper__wrapper__slide.aboutus-slide
+    grid-template-columns: 1fr
+
+.header__swiper
+    @include plus1025()
+        padding-top: 0
+.innerPage 
+    .content
         @include plus1025()
-            grid-template-columns: 1fr 1fr
-            grid-gap: 30px
-            height: 394px
+            max-width: 1030px
         @include plus1900()
-            height: 570px
-        &__main
-            width: 100%
-            height: 220px
-            position: relative
-            @include plus1025()
-                height: 394px
-            @include plus1900()
-                height: 570px
-            .simpleParallax
-                width: 100%
-                height: 100%
-            img
-                width: 100%
-                height: 100%
-                object-fit: cover
-            &__cover
-                width: 100%
-                height: 100%
-                position: absolute
-                z-index: 10
-                left: 0
-                top: 0
-                background-color: $grey
-                transition: width 1.2s .2s ease-out 
-        &__restUl
-            display: grid
-            grid-template-columns: repeat(2, 1fr)
-            grid-auto-rows: 120px
-            grid-gap: 10px
-            @include plus1025()
-                height: 394px
-                grid-auto-rows: unset
-                grid-template-rows: 182px 182px
-                grid-template-columns: repeat(3, 1fr)
-                grid-gap: 30px
-            @include plus1900()
-                grid-template-rows: 268px 268px
-                height: 570px
-            &__li
-                position: relative
-                display: flex
-                width: 100%
-                height: 100%
-                .simpleParallax
-                    width: 100%
-                    height: 100%
-                img
-                    width: 100%
-                    height: 100%
-                    object-fit: cover
-                &__cover
-                    width: 100%
-                    height: 100%
-                    position: absolute
-                    z-index: 10
-                    right: 0
-                    top: 0
-                    background-color: $grey
-                    transition: width 1.2s .2s ease-out 
-    img
-        cursor: pointer          
-    &__linkSeeAll
-        position: absolute
-        bottom: 0
-        font-size: 14px
-        text-transform: capitalize
-        font-family: Helvetica, sans-serif
+            max-width: 1460px
+    .title
+        font-size: 18px
+        margin-bottom: 30px
         @include plus1025()
-            bottom: unset
-            top: 26px
-            right: 0
-            font-size: 20px
-
-
-
-.photogallery
-    @extend .sec1videomodal
-    &.opened
-        width: 100%
-        height: 100vh
-    &__X
-        position: absolute
-        top: 40px
-        right: 15px
-        z-index: 1
-        color: #ffffff60
-        font-size: 20px
-        @include plus1025()
-            top: 30px
-            right: 60px
-            font-size: 30px
-    &__swiperbox
-        height: 50vh
-        width: 100%
-        overflow: hidden
-        @include plus1025()
-            height: 600px
-            max-height: calc( 100vh - 180px )
+            font-size: 34px
+            margin-bottom: 40px 
         @include plus1900()
-            height: 800px
-        
-    &__navigation
-        &__prev, &__next
-            z-index: 1
-            position: absolute
-            display: flex
-            justify-content: center
-            align-items: center
-            width: 50px
-            height: 50px
-            background-color: $yellow
-            top: 50%
-            transform: translateY(-50%)
-            cursor: pointer
-        &__prev
-            left: 10%
-        &__next
-            right: 10%
-    &__swiper
-        height: 100%
-        width: 100%
-        overflow: hidden
-        &__wrapper
-            display: flex
-            width: 100%
-            height: 100%
-            &__slide
-                flex-shrink: 0
-                height: 100%
-                img
-                    height: 100%
-                    width: 100%
-                    object-fit: cover
+            font-size: 44px
+            margin-bottom: 60px
+    .navigation + *
+        @include plus1025()
+            margin-top: 55px
+        @include plus1900()
+            margin-top: 0
+.aboutmain
+    h1
+
+    &__textbox
+        @include font(14px, 20px)
+        @include plus1025()
+            @include font(18px, 28px)
+        p
+            &:not(:last-child)
+                margin-bottom: 1em

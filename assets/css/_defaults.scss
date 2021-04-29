@@ -32,28 +32,28 @@ body {
   .container {
     padding: 0 14px;
   }
-  .container.darktheme {
-    position: relative;
-    background-color: var(--blackbg);
-  }
-  .container.darktheme.navigation::after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 34px 100vw;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-color: transparent transparent #E7E7E7 transparent;
-  }
-  .container.darktheme .lang li {
-    background-color: #434242;
-  }
-  .container.darktheme nav a {
-    color: #fff;
-  }
   @media (min-width: 1024px) {
+    .container.darktheme {
+      position: relative;
+      background-color: var(--blackbg);
+    }
+    .container.darktheme.navigation::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 34px 100vw;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-color: transparent transparent #E7E7E7 transparent;
+    }
+    .container.darktheme .lang li {
+      background-color: #434242;
+    }
+    .container.darktheme nav a {
+      color: #fff;
+    }
     .container {
       padding: 0 81px;
     }
