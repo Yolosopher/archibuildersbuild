@@ -44,46 +44,9 @@ h1, h2, h3, h4, h5, h6
 @import _homegallery
 
 
-.header__swiper__wrapper.aboutus-wrappa
-    padding-bottom: 80px
-    @include plus1025()
-        padding-bottom: 60px
-    @include plus1900()
-        padding-top: 70px
+@import _aboutpage
 
-.header__swiper__wrapper__slide.aboutus-slide
-    grid-template-columns: 1fr
+@import _contactoriginal
 
-.header__swiper
-    @include plus1025()
-        padding-top: 0
-.innerPage 
-    .content
-        @include plus1025()
-            max-width: 1030px
-        @include plus1900()
-            max-width: 1460px
-    .title
-        font-size: 18px
-        margin-bottom: 30px
-        @include plus1025()
-            font-size: 34px
-            margin-bottom: 40px 
-        @include plus1900()
-            font-size: 44px
-            margin-bottom: 60px
-    .navigation + *
-        @include plus1025()
-            margin-top: 55px
-        @include plus1900()
-            margin-top: 0
-.aboutmain
-    h1
 
-    &__textbox
-        @include font(14px, 20px)
-        @include plus1025()
-            @include font(18px, 28px)
-        p
-            &:not(:last-child)
-                margin-bottom: 1em
+@import _contactmy

@@ -3,6 +3,9 @@ const mobileHolder = document.querySelector('.mobile-holder')
 const navigation = document.querySelector('.navigation')
 const hamburger = document.querySelector('.hamburger')
 
+if (document.querySelector('.innerPage')) {
+    navigation.classList.add('darktheme')
+}
 
 langs.forEach(lang => {
     lang.addEventListener('click', () => {
@@ -30,10 +33,20 @@ const callbackFunction = (entries) => {
     }
 }
 
-const observer = new IntersectionObserver(callbackFunction, {
-    threshold: 0.3,
-})
 
 sections.forEach((section) => {
+    const observer = new IntersectionObserver(callbackFunction, {
+        // root: section.parentElement,
+        // rootMargin: '0px',
+        threshold: 0.01,
+    })
     observer.observe(section)
+})
+
+window.addEventListener('load', () => {
+    // if (document.querySelector('.innerPage')) {
+    //     document.querySelectorAll('.fadeinx').forEach(each => {
+    //         each.classList.add('fadein')
+    //     })
+    // }
 })
