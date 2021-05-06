@@ -2447,9 +2447,20 @@ h1, h2, h3, h4, h5, h6 {
           transform: translateY(0) !important;
 }
 
+.pagesmain {
+  margin-bottom: 70px;
+}
+
 @media screen and (min-width: 1025px) {
   .pagesmain {
+    margin-bottom: 140px;
     margin-top: -37px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .pagesmain {
+    margin-bottom: 180px;
   }
 }
 
