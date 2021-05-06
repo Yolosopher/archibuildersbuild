@@ -249,18 +249,19 @@
                 font-weight: bold
 
     &__navigation
-        display: none
-        width: max-content
-        grid-template-columns: auto auto
-        grid-gap: 20px
-        position: absolute
-        right: 0
-        top: 100%
-        @include plus1025()
-            display: grid
-        &__prev
-            position: static
-        &__next
-            position: static
+        &.projpagesnav
+            display: none
+            width: max-content
+            grid-template-columns: auto auto
+            grid-gap: 20px
+            position: absolute
+            right: 0
+            top: 100%
+            @include plus1025()
+                display: grid
+            .pagesmodal__navigation__prev
+                position: static
+            .pagesmodal__navigation__next
+                position: static
 .pagesmodal__X
     z-index: 2

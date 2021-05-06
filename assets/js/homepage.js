@@ -130,8 +130,8 @@ galleryImages.forEach((img, index) => {
             centeredSlides: true,
             initialSlide: index,
             navigation: {
-                nextEl: '.photogallery__navigation__next',
-                prevEl: '.photogallery__navigation__prev'
+                nextEl: '.pagesmodal__navigation__next',
+                prevEl: '.pagesmodal__navigation__prev'
             }
         })
         
