@@ -52,6 +52,7 @@
                 left: -200px 
                 font-size: 44px
         &__swiper
+            overflow: initial
             width: 100%
             @include plus1025()
                 height: 475px
@@ -185,7 +186,9 @@
             &.pagmob
                 @include plus1025()
                     display: none
-
+    .title
+        @include plus1025()
+            max-width: 50%
 .pagesmodal
     .pagesmodal__swiperbox
         @media screen and ( max-width: 1024px )

@@ -2546,6 +2546,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pagesmain__gallery__swiper {
+  overflow: initial;
   width: 100%;
 }
 
@@ -2786,6 +2787,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media screen and (min-width: 1025px) {
+  .pagesmain .title {
+    max-width: 50%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .pagesmodal .pagesmodal__swiperbox {
     padding: 15px !important;
@@ -2989,5 +2996,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (min-width: 1900px) {
+  .slideNav {
+    left: 52%;
+    bottom: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
